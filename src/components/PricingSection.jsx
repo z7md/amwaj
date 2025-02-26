@@ -77,6 +77,7 @@ const PricingSection = () => {
           >
             {productCount} products
           </motion.p>
+          
           <motion.div 
             variants={fadeIn('up', 1.0)}
             className="relative px-4"
