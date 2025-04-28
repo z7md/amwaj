@@ -6,18 +6,23 @@ const FeaturesSection = () => {
   const features = [
     {
       icon: "🔍", 
-      title: "Find out what you need",
-      description: "We present you a proposal and discuss nitty-gritty like"
+      title: "جودة عالية",
+      description: "نقدم لك أفضل خدمات التنظيف باستخدام أدوات ومعدات حديثة."
     },
     {
       icon: "⚙️",
-      title: "Work out the details", 
-      description: "Communication protocols apart from engagement models"
+      title: "فريق محترف", 
+      description: "لدينا فريق من الخبراء المدربين على أعلى مستوى لضمان تحقيق أفضل النتائج"
     },
     {
       icon: "🚀",
-      title: "We get to work fast",
-      description: "Protocols apart from engage models, pricing billing"
+      title: "أسعار تنافسية",
+      description: "نقدم لك خدمات تنظيف عالية الجودة بأسعار معقولة"
+    },
+    {
+      icon: "🚀",
+      title: "رضاء العملاء",
+      description: "نضع رضا عملائنا في مقدمة أولوياتنا ونسعى دائمًا لتحسين خدماتنا."
     }
   ]
 
@@ -36,19 +41,14 @@ const FeaturesSection = () => {
           variants={textVariant(0.2)}
           className="text-3xl font-bold mb-4"
         >
-          How can we help your business?
+          لماذا تختارنا
         </motion.h2>
-        <motion.p 
-          variants={fadeIn('up', 0.4)}
-          className="text-gray-600"
-        >
-          When you resell besnik, you build trust and increase
-        </motion.p>
+
       </motion.div>
       
       <motion.div 
         variants={fadeIn('up', 0.5)}
-        className="grid grid-cols-1 md:grid-cols-3 gap-8"
+        className="grid grid-cols-1 md:grid-cols-4 gap-8"
       >
         {features.map((feature, index) => (
           <motion.div 

@@ -22,13 +22,13 @@ const Hero = () => {
           whileInView="show"
           className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight"
         >
-          We boost the growth for{' '}
+          بيتك يلمع... ومكتبك يتألق! {' '}
           <span className="text-blue-600 relative inline-block">
-            Startup to Fortune 500
-            <span className="absolute bottom-0 left-0 w-full h-0.5 bg-blue-200/60"></span>
-          </span>{' '}
-          Companies
-          <span className="inline-block ml-2 animate-pulse">⏰</span>
+          مع الأمواج، النظافة صارت أسهل وأسرع.
+
+
+          </span>
+          
         </motion.h1>
 
         <motion.p 
@@ -37,7 +37,11 @@ const Hero = () => {
           whileInView="show"
           className="text-gray-600 text-lg md:text-xl max-w-xl"
         >
-          Get the most accurate leads, sales people training and conversions, tools and more — all within the same one billing.
+         خدمة احترافية، أسعار منافسة، ونتائج تبهر العيون.
+
+احجز الآن وعيش راحة البال! 🧹🏡
+
+
         </motion.p>
 
         <motion.div 

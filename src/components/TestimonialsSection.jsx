@@ -9,39 +9,47 @@ import { fadeIn, textVariant } from "../utils/motion";
 const testimonials = [
   {
     id: 1,
-    name: "Robin Ayala Doe", 
+    name: "Malek Ghlab", 
     image: "https://randomuser.me/api/portraits/men/77.jpg",
-    text: "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast.",
+    text: "ما شاء الله.الشركة عنوان للتنظيف الدقيق في مدينةالقصيم.ما شاء الله عمالتهم جدا محترفين ودقيقين في العمل وسريعين في الانجاز.يتقبلون الملاحظات بصدر رحب ويقومون بالتعديل والتصحيح فورا.تهمهم تجربة العميل معاهم.سلمهم بيتك وانت مرتاح شكرا لهم",
   },
   {
     id: 2,
-    name: "John De marli",
+    name: "Om Lamees",
     image: "https://randomuser.me/api/portraits/women/90.jpg", 
-    text: "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove.",
+    text: "  دلله ربي وفقني وتعاملت معهم وكان اختيار موفق اشتغلوا على البيت بعد ترميم العماره بداية من الخزان العلوي للخزان السفلي مع الأرصفة للبيت وكانوا دقيقين وسريعين وشغل احترافي وممتاز وسعر ممتاز وتعامل الأستاذ أبو إلياس ومتابعته ب استمرار للموقع والعمالهشكرا لكم ومن افضل شركات التنظيف والنقل بالمنطقة 🙏🏻👌🏻  ",
   },
   {
     id: 3,
-    name: "Rowhan Smith",
+    name: "فهد الضبيعي",
     image: "https://randomuser.me/api/portraits/men/90.jpg",
-    text: "When she reached the first hills of the Mountains, she had a last view back on the of her hometown Bookmarksgrove, the headline.",
+    text: "بكل صراحه انا متعامل مع شركات تنظيف كثير ممكن اكثر من خمس شركات لكن و الامواج شغلهم احترافي ١٠٠٪؜ الله يعطيهم العافية من اليوم و رايح ما راح اتعامل الا مع الامواج .",
   },
   {
     id: 4,
-    name: "Sarah Johnson",
+    name: "naif almrwni",
     image: "https://randomuser.me/api/portraits/women/45.jpg",
-    text: "The customer service has been exceptional. They went above and beyond to help me solve my problems and were always available when I needed them.",
+    text: `الصراحة من ابدع ما يكون
+1- اخلاق العمال جدا رائعة
+2- السرعة
+3- النظافة
+انصح بها وبقوة
+الله يوفقهم`,
   },
   {
     id: 5,
-    name: "Michael Chen",
+    name: "Ahmad Mohmad",
     image: "https://randomuser.me/api/portraits/men/32.jpg",
-    text: "I've been using their services for over a year now and couldn't be happier. The platform is intuitive and the features are exactly what I needed for my business.",
+    text: `بيض الله وجهكم
+الصراحة شغلكم يوسع الصدر ماقصرتو
+زينت العمال مهب مزاجيين يتقبلون التوجيه والتدبير
+وشغلهم زين دقيقين بالتركيب دقيقين بالشيل وزود على ذالك قرمين`,
   },
   {
     id: 6,
-    name: "Emma Wilson",
+    name: "Afrah Ebrahim",
     image: "https://randomuser.me/api/portraits/women/28.jpg",
-    text: "What impressed me most was how quickly they responded to my requests. The team is professional, knowledgeable, and truly cares about their customers' success.",
+    text: `بدون مبالغة أفضل شركة تنظيف بالقصيم رقي بالعمل والتعامل ، جربتهم بتنظيف فيلا وشالية تنظيفهم لايعلى عليه مناشفهم أستخدام واحد وأسعارهم مناسبه جدا`
   },
 
 ];
@@ -57,13 +65,13 @@ const TestimonialsSection = () => {
           variants={textVariant(0.2)}
           className="text-3xl md:text-4xl font-bold mb-4"
         >
-          What our happy client say
+          عملاءنا السعداء
         </motion.h2>
         <motion.p 
           variants={fadeIn('up', 0.4)}
           className="text-gray-600"
         >
-          Things that make it the best place to start trading
+          اشياء تجعلنا الافضل
         </motion.p>
       </motion.div>
 
@@ -150,7 +158,7 @@ const TestimonialsSection = () => {
             whileTap={{ scale: 0.9 }}
             className="swiper-button-prev-custom w-12 h-12 rounded-full border border-gray-200 flex items-center justify-center hover:bg-blue-500 hover:text-white cursor-pointer transition-colors"
           >
-            <BsChevronLeft className="w-6 h-6" />
+            <BsChevronRight className="w-6 h-6" />
           </motion.button>
           <motion.button 
             variants={fadeIn('left', 0.8)}
@@ -158,7 +166,7 @@ const TestimonialsSection = () => {
             whileTap={{ scale: 0.9 }}
             className="swiper-button-next-custom w-12 h-12 rounded-full border border-gray-200 flex items-center justify-center hover:bg-blue-500 hover:text-white cursor-pointer transition-colors"
           >
-            <BsChevronRight className="w-6 h-6" />
+            <BsChevronLeft className="w-6 h-6" />
           </motion.button>
         </motion.div>
 

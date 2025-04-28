@@ -8,10 +8,10 @@ const Navbar = () => {
   const [activeLink, setActiveLink] = useState('#home')
 
   const navLinks = [
-    { href: "#home", label: "Home" },
-    { href: "#about", label: "About Us" },
-    { href: "#services", label: "Our Service" },
-    { href: "#testimonials", label: "Testimonials" },
+    { href: "#home", label: "الصفحة الرئيسية" },
+    { href: "#about", label: "من نحن" },
+    { href: "#services", label: "خدماتنا" },
+    { href: "#testimonials", label: "اراء العملاء" },
   ]
 
   return (
