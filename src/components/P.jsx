@@ -148,12 +148,13 @@ export default function PricingSection() {
         >
           جاهز للحجز؟
         </motion.p>
-        <motion.button
+        <motion.a
           variants={fadeIn('up', 0.7)}
           className="bg-red-600 text-white px-6 py-3 rounded-lg hover:bg-red-700 transition-colors cursor-pointer"
+          href="tel:+966563309090"
         >
-          أحجز الآن
-        </motion.button>
+          أتصل الآن
+        </motion.a>
       </motion.div>
     </motion.div>
     </section>

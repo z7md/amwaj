@@ -4,6 +4,7 @@ import { SiGooglemaps } from "react-icons/si";
 import { motion } from "framer-motion";
 import { fadeIn, textVariant } from "../utils/motion";
 import Image from '../assets/logo.png';
+import { IoCallOutline } from "react-icons/io5";
 
 const Footer = () => {
 
@@ -47,9 +48,17 @@ const Footer = () => {
               className="flex gap-4"
             >
 
+                      <motion.a
+                        whileHover={{ scale: 1.1 }}
+                        href="tel:+966563309090"
+                        className="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center text-gray-600 hover:bg-red-600 hover:text-white transition-colors"
+                      >
+                        <IoCallOutline className="w-5 h-5" />
+                      </motion.a>
+
               <motion.a
                 whileHover={{ scale: 1.1 }}
-                href="#"
+                href="https://wa.me/966563309090"
                 className="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center text-gray-600 hover:bg-red-700 hover:text-white transition-colors"
               >
                 <FaWhatsapp className="w-5 h-5" />
