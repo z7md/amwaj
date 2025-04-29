@@ -1,0 +1,92 @@
+import React, { useState } from 'react';
+
+// قائمة الخدمات المتاحة
+const allServices = [
+  { id: 1, name: 'تصميم موقع', price: 500 },
+  { id: 2, name: 'برمجة تطبيق', price: 1200 },
+  { id: 3, name: 'كتابة محتوى', price: 300 },
+  { id: 4, name: 'استضافة سنوية', price: 150 },
+];
+
+export default function PricingSection() {
+  const [selectedServices, setSelectedServices] = useState([]);
+  const [quantities, setQuantities] = useState({});
+
+  // إضافة خدمة مختارة
+  const handleAddService = (serviceId) => {
+    const service = allServices.find(s => s.id === serviceId);
+  
+    // إذا كانت الخدمة موجودة بالفعل، يتم إزالتها
+    if (selectedServices.some(s => s.id === serviceId)) {
+      setSelectedServices(selectedServices.filter(s => s.id !== serviceId));
+    } else {
+      // إذا لم تكن موجودة، يتم إضافتها
+      setSelectedServices([...selectedServices, service]);
+    }
+  };
+
+  // تحديث الكمية
+  const handleQuantityChange = (serviceId, quantity) => {
+    setQuantities(prev => ({
+      ...prev,
+      [serviceId]: Number(quantity),
+    }));
+  };
+
+  // حساب المجموع
+  const total = selectedServices.reduce((sum, service) => {
+    const quantity = quantities[service.id] || 0;
+    return sum + (service.price * quantity);
+  }, 0);
+
+  return (
+    <div className="p-6 max-w-2xl mx-auto flex justify-center items-center flex-col">
+      <h2 className="text-2xl font-bold mb-6">اختر الخدمات المطلوبة</h2>
+
+      {/* عرض الخدمات للاختيار منها */}
+      <div className="mb-4">
+        <div className="w-full flex gap-2">
+          {allServices.map(service => (
+            <div
+              key={service.id}
+              onClick={() => handleAddService(service.id)}
+              className={`border rounded p-2 cursor-pointer ${
+                selectedServices.some(s => s.id === service.id) ? 'bg-blue-500 text-white' : 'bg-gray-100'
+              }`}
+            >
+              {service.name}
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* عرض الخدمات التي اختارها المستخدم */}
+      {selectedServices.length > 0 && (
+        <div className="mb-6">
+          {selectedServices.map(service => (
+            <div key={service.id} className="flex items-center justify-between mb-4">
+              <div>
+                <h3 className="font-semibold">{service.name}</h3>
+                <p className="text-sm text-gray-500">{service.price} ريال للخدمة</p>
+              </div>
+              <div className="flex items-center">
+                <input
+                  type="number"
+                  min="0"
+                  className="border rounded p-2 w-20"
+                  value={quantities[service.id] || ''}
+                  onChange={(e) => handleQuantityChange(service.id, e.target.value)}
+                />
+              </div>
+            </div>
+          ))}
+        </div>
+      )}
+
+      {/* عرض المجموع الكلي */}
+      <div className="mt-6 text-xl font-bold">
+        المجموع الكلي: {total} ريال
+      </div>
+    </div>
+  );
+}

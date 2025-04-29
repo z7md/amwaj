@@ -5,95 +5,79 @@ import { FiSettings } from 'react-icons/fi'
 import { BiTime } from 'react-icons/bi'
 import { motion } from "framer-motion";
 import { fadeIn, textVariant } from "../utils/motion";
+import { FaHouseDamage } from 'react-icons/fa'; // House cleaning
+import { MdOutlineCleaningServices } from 'react-icons/md'; // Tile and marble cleaning
+import { FaTools } from 'react-icons/fa'; // Furniture assembly
+import { IoMdBrush } from 'react-icons/io'; // Carpet and sofa cleaning
+import { IoBugSharp } from "react-icons/io5";
 
 const ServicesSection = () => {
   const services = [
     {
-      icon: <BsStack className="w-8 h-8 text-indigo-600" />,
-      title: "Web Design",
-      description: "One for all and all for one, Muskehounds are always ready.",
+      icon: <FaHouseDamage className="w-8 h-8 text-blue-400" />, // Light blue for house cleaning
+      title: "غسيل المنازل",
+      description: "نحن نقدم خدمة غسيل المنازل بكفاءة عالية، لجعل منزلك نظيفاً ومشرقاً.",
       link: "#learn-more"
     },
     {
-      icon: <HiLightBulb className="w-8 h-8 text-amber-400" />,
-      title: "Ad-Creatives", 
-      description: "Alphabet Village and the subline of her own road.",
+      icon: <MdOutlineCleaningServices className="w-8 h-8 text-yellow-400" />, // Light yellow for tile cleaning
+      title: "جلي وتلميع البلاط والرخام", 
+      description: "نحن متخصصون في جلي وتلميع البلاط والرخام لضمان لمسة نهائية لامعة وجميلة.",
       link: "#learn-more"
     },
     {
-      icon: <FiSettings className="w-8 h-8 text-red-400" />,
-      title: "Automation",
-      description: "Little Blind Text should turn around and return.",
+      icon: <FaTools className="w-8 h-8 text-orange-500" />, // Orange for furniture assembly
+      title: "فك وتركيب الأثاث",
+      description: "نقدم خدمة فك وتركيب الأثاث بدقة واحترافية، لنضمن لك ترتيب منزلك بسهولة.",
       link: "#learn-more"
     },
     {
-      icon: <BiTime className="w-8 h-8 text-cyan-400" />,
-      title: "Infographics",
-      description: "Nothing the copy said could convince her.",
+      icon: <IoMdBrush className="w-8 h-8 text-green-400" />, // Green for carpet and sofa cleaning
+      title: "غسيل المجالس والسجاد",
+      description: "نحن نوفر خدمة غسيل المجالس والسجاد لإعادة النظافة والانتعاش لكل زاوية في منزلك.",
+      link: "#learn-more"
+    },
+    {
+      icon: <IoBugSharp className="w-8 h-8 text-red-500" />, // Red for pest control
+      title: "مكافحة الحشرات",
+      description: "نحن نقدم حلول فعالة لمكافحة الحشرات لضمان بيئة نظيفة وآمنة لك ولعائلتك.",
       link: "#learn-more"
     }
-  ]
+  ];
+  
 
   return (
     <section id="services" className="py-20 container mx-auto px-4 sm:px-6 lg:px-8">
      <motion.div 
       variants={fadeIn('up', 0.3)}
-      className='flex flex-col md:flex-row items-center justify-between gap-12 lg:gap-24'
+      className='flex flex-col  items-center justify-between gap-12 lg:gap-24'
      >
        {/* Header */}
+       
        <motion.div 
         variants={fadeIn('right', 0.4)}
         className="md:w-1/3"
        >
         <motion.h2 
           variants={textVariant(0.2)}
-          className="text-3xl md:text-4xl font-bold mb-6 md:w-4/5"
+          className="text-3xl md:text-4xl font-bold mb-6 text-center"
         >
-          Future of support with new shape
+          خدماتنا
         </motion.h2>
-        <motion.p 
-          variants={fadeIn('up', 0.5)}
-          className="text-gray-600 text-lg mb-4 md:w-4/5"
-        >
-          Discuss your goals, determine success metrics, identify problems
-        </motion.p>
+
         <motion.div 
           variants={fadeIn('up', 0.6)}
           className="space-y-3"
         >
-          <motion.div 
-            variants={fadeIn('right', 0.7)}
-            className="flex items-center gap-2"
-          >
-            <div className="w-5 h-5 rounded-full bg-indigo-100 flex items-center justify-center">
-              <div className="w-2.5 h-2.5 rounded-full bg-indigo-600"></div>
-            </div>
-            <span className="text-gray-600">UX design content strategy</span>
-          </motion.div>
-          <motion.div 
-            variants={fadeIn('right', 0.8)}
-            className="flex items-center gap-2"
-          >
-            <div className="w-5 h-5 rounded-full bg-indigo-100 flex items-center justify-center">
-              <div className="w-2.5 h-2.5 rounded-full bg-indigo-600"></div>
-            </div>
-            <span className="text-gray-600">Development bring</span>
-          </motion.div>
+
         </motion.div>
-        <motion.button 
-          variants={fadeIn('up', 0.9)}
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-          className="mt-8 bg-indigo-600 text-white px-8 py-3 cursor-pointer rounded-full hover:bg-indigo-700 transition-colors"
-        >
-          Get started
-        </motion.button>
+
       </motion.div>
 
       {/* Services Grid */}
       <motion.div 
         variants={fadeIn('left', 0.4)}
-        className="grid grid-cols-1 md:grid-cols-2 gap-8"
+        className="flex flex-col md:flex-row gap-8"
       >
         {services.map((service, index) => (
           <motion.div 
@@ -120,13 +104,6 @@ const ServicesSection = () => {
             >
               {service.description}
             </motion.p>
-            <motion.a 
-              variants={fadeIn('up', 0.6 * (index + 1))}
-              href={service.link}
-              className="text-indigo-600 font-medium hover:text-indigo-700 transition-colors"
-            >
-              LEARN MORE
-            </motion.a>
           </motion.div>
         ))}
       </motion.div>

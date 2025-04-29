@@ -21,17 +21,17 @@ const PricingSection = () => {
           variants={textVariant(0.3)}
           className="text-3xl md:text-4xl font-bold text-center mb-16"
         >
-          Pricing
+          الأسعار التقريبية
         </motion.h2>
         
         <motion.div 
           variants={fadeIn('up', 0.4)}
-          className="grid md:grid-cols-2 gap-8 mb-12"
+          className="flex flex-cols justify-center items-center  gap-8 mb-12 "
         >
           {/* Starter Plan */}
           <motion.div 
             variants={fadeIn('right', 0.5)}
-            className="bg-white p-8 rounded-lg shadow-lg"
+            className="bg-white p-8 rounded-lg shadow-lg w-[80%]"
           >
             <motion.h3 
               variants={fadeIn('up', 0.6)}
@@ -47,24 +47,8 @@ const PricingSection = () => {
             </motion.p>
           </motion.div>
           
-          {/* Business Plan */}
-          <motion.div 
-            variants={fadeIn('left', 0.5)}
-            className="bg-white p-8 rounded-lg shadow-lg"
-          >
-            <motion.h3 
-              variants={fadeIn('up', 0.6)}
-              className="text-xl text-gray-600 mb-4"
-            >
-              Business
-            </motion.h3>
-            <motion.p 
-              variants={fadeIn('up', 0.7)}
-              className="text-3xl font-bold mb-6"
-            >
-              ${businessPrice}/mo
-            </motion.p>
-          </motion.div>
+
+
         </motion.div>
 
         <motion.div 
@@ -104,15 +88,15 @@ const PricingSection = () => {
               variants={fadeIn('up', 1.2)}
               className="text-xl text-gray-600 mb-4"
             >
-              Ready to get started?
+              جاهز للحجز؟
             </motion.p>
             <motion.button 
               variants={fadeIn('up', 1.3)}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors cursor-pointer"
+              className="bg-red-600 text-white px-6 py-3 rounded-lg hover:bg-red-700 transition-colors cursor-pointer"
             >
-              Get Started
+              أحجز الآن
             </motion.button>
           </motion.div>
         </motion.div>

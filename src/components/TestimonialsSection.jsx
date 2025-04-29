@@ -3,6 +3,7 @@ import { Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import { BsChevronLeft, BsChevronRight } from 'react-icons/bs';
+import { FaRegUserCircle } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { fadeIn, textVariant } from "../utils/motion";
 
@@ -65,14 +66,9 @@ const TestimonialsSection = () => {
           variants={textVariant(0.2)}
           className="text-3xl md:text-4xl font-bold mb-4"
         >
-          عملاءنا السعداء
+          اراء العملاء
         </motion.h2>
-        <motion.p 
-          variants={fadeIn('up', 0.4)}
-          className="text-gray-600"
-        >
-          اشياء تجعلنا الافضل
-        </motion.p>
+
       </motion.div>
 
       <motion.div 
@@ -107,14 +103,9 @@ const TestimonialsSection = () => {
               >
                 <motion.div 
                   variants={fadeIn('down', 0.4 * (index + 1))}
-                  className="w-24 h-24 mx-auto mb-4"
+                  className="w-20 h-20 mx-auto mb-4"
                 >
-                  <motion.img
-                    variants={fadeIn('up', 0.5 * (index + 1))}
-                    src={testimonial.image}
-                    alt={testimonial.name}
-                    className="w-full h-full object-cover rounded-full"
-                  />
+                  <FaRegUserCircle className="w-full h-full text-red-700"/>
                 </motion.div>
                 <motion.div 
                   variants={fadeIn('up', 0.4 * (index + 1))}
@@ -124,7 +115,7 @@ const TestimonialsSection = () => {
                     <motion.span 
                       key={starIndex} 
                       variants={fadeIn('up', 0.1 * starIndex)}
-                      className="text-blue-600"
+                      className="text-red-600"
                     >
                       ★
                     </motion.span>
@@ -156,7 +147,7 @@ const TestimonialsSection = () => {
             variants={fadeIn('right', 0.8)}
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
-            className="swiper-button-prev-custom w-12 h-12 rounded-full border border-gray-200 flex items-center justify-center hover:bg-blue-500 hover:text-white cursor-pointer transition-colors"
+            className="swiper-button-prev-custom w-12 h-12 rounded-full border border-gray-200 flex items-center justify-center hover:bg-red-500 hover:text-white cursor-pointer transition-colors"
           >
             <BsChevronRight className="w-6 h-6" />
           </motion.button>
@@ -164,7 +155,7 @@ const TestimonialsSection = () => {
             variants={fadeIn('left', 0.8)}
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
-            className="swiper-button-next-custom w-12 h-12 rounded-full border border-gray-200 flex items-center justify-center hover:bg-blue-500 hover:text-white cursor-pointer transition-colors"
+            className="swiper-button-next-custom w-12 h-12 rounded-full border border-gray-200 flex items-center justify-center hover:bg-red-500 hover:text-white cursor-pointer transition-colors"
           >
             <BsChevronLeft className="w-6 h-6" />
           </motion.button>

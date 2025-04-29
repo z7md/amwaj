@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { HiMenu, HiX } from 'react-icons/hi'
 import { motion } from "framer-motion";
 import { fadeIn} from "../utils/motion";
+import Image from '../assets/logo.png';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -28,19 +29,12 @@ const Navbar = () => {
           variants={fadeIn('right', 0.3)}
           className="flex items-center gap-1 cursor-pointer"
         >
-          <motion.div 
-            whileHover={{ scale: 1.1 }}
-            className="w-4 h-4 bg-blue-600 rounded-full opacity-75 hover:opacity-100 transition-opacity"
-          ></motion.div>
-          <motion.div 
-            whileHover={{ scale: 1.1 }}
-            className="w-4 h-4 bg-red-500 rounded-full -ml-2 hover:opacity-75 transition-opacity"
-          ></motion.div>
+          <img src={Image} alt="Example" style={{ width: '70px', height: "50px", objectFit: 'cover' }} />
         </motion.div>
         {/* Mobile Menu Button */}
         <motion.button 
           variants={fadeIn('left', 0.3)}
-          className="md:hidden p-2"
+          className="md:hidden p-2 cursor-pointer"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
         >
           {isMenuOpen ? (
@@ -61,8 +55,8 @@ const Navbar = () => {
               variants={fadeIn('down', 0.1 * (index + 1))}
               href={link.href}
               onClick={() => setActiveLink(link.href)}
-              className={`text-sm font-medium relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 hover:after:w-full after:bg-blue-600 after:transition-all
-                ${activeLink === link.href ? 'text-blue-600 after:w-full  ' : 'text-gray-600 hover:text-gray-900'}`}
+              className={`text-sm font-medium relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 hover:after:w-full after:bg-red-600 after:transition-all
+                ${activeLink === link.href ? 'text-red-600 after:w-full  ' : 'text-gray-600 hover:text-gray-900'}`}
             >
               {link.label}
             </motion.a>
@@ -74,9 +68,9 @@ const Navbar = () => {
           variants={fadeIn('left', 0.3)}
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
-          className="hidden md:block bg-blue-600 text-white px-6 py-2.5 rounded-lg hover:bg-blue-700 text-sm font-medium transition-all hover:shadow-lg hover:shadow-blue-100"
+          className="hidden md:block bg-red-600 text-white px-6 py-2.5 rounded-lg hover:bg-red-700 text-sm font-medium transition-all hover:shadow-lg hover:shadow-red-100 cursor-pointer"
         >
-          <a href="#newsletter">Get in touch</a>
+          <a href="#newsletter">              اتصل بنا الآن</a>
         </motion.button>
       </div>
 
@@ -102,7 +96,7 @@ const Navbar = () => {
                   setIsMenuOpen(false);
                 }}
                 className={`block text-sm font-medium py-2
-                  ${activeLink === link.href ? 'text-blue-600' : 'text-gray-600 hover:text-gray-900'}`}
+                  ${activeLink === link.href ? 'text-red-600' : 'text-gray-600 hover:text-gray-900'}`}
               >
                 {link.label}
               </motion.a>
@@ -111,9 +105,9 @@ const Navbar = () => {
               variants={fadeIn('up', 0.4)}
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
-              className="w-full bg-blue-600 text-white px-6 py-2.5 rounded-lg hover:bg-blue-700 text-sm font-medium transition-all hover:shadow-lg hover:shadow-blue-100"
+              className="w-full bg-red-600 text-white px-6 py-2.5 rounded-lg hover:bg-red-700 text-sm font-medium transition-all hover:shadow-lg hover:shadow-red-100"
             >
-              Get in touch
+              اتصل بنا الآن
             </motion.button>
           </motion.div>
         </motion.div>
