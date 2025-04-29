@@ -10,7 +10,7 @@ const NewsletterSection = () => {
         variants={fadeIn("up", 0.2)}
         initial="hidden"
         whileInView="show"
-        className="bg-red-500 rounded-2xl overflow-hidden opacity-85"
+        className="bg-red-600 rounded-2xl overflow-hidden opacity-85"
       >
         <div className="relative md:px-16 px-6 py-16 md:py-24">
           {/* Background Gradient */}

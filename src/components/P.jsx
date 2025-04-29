@@ -42,15 +42,23 @@ export default function PricingSection() {
   }, 0);
 
   return (
+    <section id="pricing" className="py-16 px-4 max-w-7xl mx-auto">
     <motion.div
       initial="hidden"
       whileInView="show"
       variants={fadeIn('up', 0.2)}
-      className="p-6 max-w-2xl mx-auto flex justify-center items-center flex-col"
+      className="text-center mb-12 flex flex-col justify-center items-center"
     >
+                <motion.h2 
+          variants={textVariant(0.2)}
+          className="text-3xl md:text-4xl font-bold mb-16"
+        >
+           الأسعار التقريبية
+        </motion.h2>
+
       <motion.h2
         variants={textVariant(0.3)}
-        className="text-2xl font-bold mb-6"
+        className="text-2xl font-bold mb-6 "
       >
         اختر الخدمات المطلوبة
       </motion.h2>
@@ -65,10 +73,10 @@ export default function PricingSection() {
               variants={fadeIn('up', 0.5)}
               initial="hidden"
               animate="show"
-              className={`border rounded p-2 cursor-pointer ${
+              className={`border-red-500 border-2  rounded-full p-2 cursor-pointer px-4 ${
                 selectedServices.some(s => s.id === service.id)
-                  ? 'bg-blue-500 text-white'
-                  : 'bg-gray-100'
+                  ? 'bg-red-500 text-white'
+                  : null
               }`}
             >
               {service.name}
@@ -87,7 +95,7 @@ export default function PricingSection() {
             <div
               key={service.id}
               
-              className="flex items-center justify-between mb-4"
+              className="flex items-center justify-between mb-4 border-2 border-red-500 rounded-xl p-1 gap-2"
             >
               <div>
                 <h3
@@ -111,7 +119,7 @@ export default function PricingSection() {
                   
                   type="number"
                   min="0"
-                  className="border rounded p-2 w-20"
+                  className="border-red-500 border rounded p-2 w-20 "
                   value={quantities[service.id] || ''}
                   onChange={(e) => handleQuantityChange(service.id, e.target.value)}
                 />
@@ -148,5 +156,6 @@ export default function PricingSection() {
         </motion.button>
       </motion.div>
     </motion.div>
+    </section>
   );
 }

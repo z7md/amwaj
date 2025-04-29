@@ -10,9 +10,16 @@ import { MdOutlineCleaningServices } from 'react-icons/md'; // Tile and marble c
 import { FaTools } from 'react-icons/fa'; // Furniture assembly
 import { IoMdBrush } from 'react-icons/io'; // Carpet and sofa cleaning
 import { IoBugSharp } from "react-icons/io5";
+import { FaTruck } from "react-icons/fa";
 
 const ServicesSection = () => {
   const services = [
+    {
+      icon: <FaTruck className="w-8 h-8 text-red-500" />, // Red for pest control
+      title: "نقل العفش",
+      description: "نحن نقدم حلول فعالة لمكافحة الحشرات لضمان بيئة نظيفة وآمنة لك ولعائلتك.",
+      link: "#learn-more"
+    },
     {
       icon: <FaHouseDamage className="w-8 h-8 text-blue-400" />, // Light blue for house cleaning
       title: "غسيل المنازل",
@@ -44,72 +51,66 @@ const ServicesSection = () => {
       link: "#learn-more"
     }
   ];
-  
 
   return (
     <section id="services" className="py-20 container mx-auto px-4 sm:px-6 lg:px-8">
-     <motion.div 
-      variants={fadeIn('up', 0.3)}
-      className='flex flex-col  items-center justify-between gap-12 lg:gap-24'
-     >
-       {/* Header */}
-       
-       <motion.div 
-        variants={fadeIn('right', 0.4)}
-        className="md:w-1/3"
-       >
-        <motion.h2 
-          variants={textVariant(0.2)}
-          className="text-3xl md:text-4xl font-bold mb-6 text-center"
-        >
-          خدماتنا
-        </motion.h2>
-
+      <motion.div
+        initial="hidden"
+        whileInView="show"
+        variants={fadeIn('up', 0.2)}
+        className='flex flex-col  items-center justify-between gap-12 lg:gap-12'
+      >
+        {/* Header */}
         <motion.div 
-          variants={fadeIn('up', 0.6)}
-          className="space-y-3"
+          variants={fadeIn('right', 0.4)}
+          className="md:w-1/3"
         >
-
+          <motion.h2 
+            variants={textVariant(0.2)}
+            className="text-3xl md:text-4xl font-bold mb-6 text-center"
+          >
+            خدماتنا
+          </motion.h2>
         </motion.div>
 
-      </motion.div>
-
-      {/* Services Grid */}
-      <motion.div 
-        variants={fadeIn('left', 0.4)}
-        className="flex flex-col md:flex-row gap-8"
-      >
-        {services.map((service, index) => (
-          <motion.div 
-            key={index}
-            variants={fadeIn('up', 0.3 * (index + 1))}
-            whileHover={{ scale: 1.05 }}
-            className="bg-white max-w-72 cursor-pointer rounded-2xl p-6 hover:shadow-xl transition-shadow duration-300"
-          >
+        {/* Services Grid */}
+        <motion.div
+          initial="hidden"
+          whileInView="show"
+          variants={fadeIn('left', 0.4)}
+          className="flex flex-col md:flex-wrap md:flex-row justify-center items-center gap-8"
+        >
+          {services.map((service, index) => (
             <motion.div 
-              variants={fadeIn('down', 0.4 * (index + 1))}
-              className="mb-4"
+              key={index}
+              variants={fadeIn('up', 0.3 * (index + 1))}
+              whileHover={{ scale: 1.05 }}
+              className="bg-white max-w-72 cursor-pointer rounded-2xl p-6 hover:shadow-xl transition-shadow duration-300"
             >
-              {service.icon}
+              <motion.div
+                variants={fadeIn('down', 0.4 * (index + 1))}
+                className="mb-4"
+              >
+                {service.icon}
+              </motion.div>
+              <motion.h3 
+                variants={textVariant(0.3)}
+                className="text-xl font-semibold mb-2"
+              >
+                {service.title}
+              </motion.h3>
+              <motion.p
+                variants={fadeIn('up', 0.5 * (index + 1))}
+                className="text-gray-600 mb-4"
+              >
+                {service.description}
+              </motion.p>
             </motion.div>
-            <motion.h3 
-              variants={textVariant(0.3)}
-              className="text-xl font-semibold mb-2"
-            >
-              {service.title}
-            </motion.h3>
-            <motion.p 
-              variants={fadeIn('up', 0.5 * (index + 1))}
-              className="text-gray-600 mb-4"
-            >
-              {service.description}
-            </motion.p>
-          </motion.div>
-        ))}
+          ))}
+        </motion.div>
       </motion.div>
-     </motion.div>
     </section>
-  )
+  );
 }
 
-export default ServicesSection 
+export default ServicesSection;

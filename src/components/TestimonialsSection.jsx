@@ -11,25 +11,21 @@ const testimonials = [
   {
     id: 1,
     name: "Malek Ghlab", 
-    image: "https://randomuser.me/api/portraits/men/77.jpg",
     text: "ما شاء الله.الشركة عنوان للتنظيف الدقيق في مدينةالقصيم.ما شاء الله عمالتهم جدا محترفين ودقيقين في العمل وسريعين في الانجاز.يتقبلون الملاحظات بصدر رحب ويقومون بالتعديل والتصحيح فورا.تهمهم تجربة العميل معاهم.سلمهم بيتك وانت مرتاح شكرا لهم",
   },
   {
     id: 2,
     name: "Om Lamees",
-    image: "https://randomuser.me/api/portraits/women/90.jpg", 
     text: "  دلله ربي وفقني وتعاملت معهم وكان اختيار موفق اشتغلوا على البيت بعد ترميم العماره بداية من الخزان العلوي للخزان السفلي مع الأرصفة للبيت وكانوا دقيقين وسريعين وشغل احترافي وممتاز وسعر ممتاز وتعامل الأستاذ أبو إلياس ومتابعته ب استمرار للموقع والعمالهشكرا لكم ومن افضل شركات التنظيف والنقل بالمنطقة 🙏🏻👌🏻  ",
   },
   {
     id: 3,
     name: "فهد الضبيعي",
-    image: "https://randomuser.me/api/portraits/men/90.jpg",
     text: "بكل صراحه انا متعامل مع شركات تنظيف كثير ممكن اكثر من خمس شركات لكن و الامواج شغلهم احترافي ١٠٠٪؜ الله يعطيهم العافية من اليوم و رايح ما راح اتعامل الا مع الامواج .",
   },
   {
     id: 4,
     name: "naif almrwni",
-    image: "https://randomuser.me/api/portraits/women/45.jpg",
     text: `الصراحة من ابدع ما يكون
 1- اخلاق العمال جدا رائعة
 2- السرعة
@@ -60,6 +56,8 @@ const TestimonialsSection = () => {
     <section id="testimonials" className="py-16 px-4 max-w-7xl mx-auto">
       <motion.div 
         variants={fadeIn('up', 0.3)}
+        initial="hidden"
+        whileInView="show"
         className="text-center mb-12"
       >
         <motion.h2 
@@ -68,11 +66,12 @@ const TestimonialsSection = () => {
         >
           اراء العملاء
         </motion.h2>
-
       </motion.div>
 
       <motion.div 
         variants={fadeIn('up', 0.5)}
+        initial="hidden"
+        whileInView="show"
         className="relative"
       >
         <Swiper
@@ -98,17 +97,21 @@ const TestimonialsSection = () => {
           {testimonials.map((testimonial, index) => (
             <SwiperSlide key={testimonial.id} className='h-full md:py-12 py-4'>
               <motion.div 
-                variants={fadeIn('up', 0.3 * (index + 1))}
+                variants={fadeIn('up', 0.3)}
+                initial="hidden"
+                whileInView="show"
                 className="text-center bg-white p-4 rounded-lg shadow-md h-full flex flex-col"
               >
                 <motion.div 
-                  variants={fadeIn('down', 0.4 * (index + 1))}
+                  variants={fadeIn('down', 0.3)}
+                  initial="hidden"
+                  whileInView="show"
                   className="w-20 h-20 mx-auto mb-4"
                 >
                   <FaRegUserCircle className="w-full h-full text-red-700"/>
                 </motion.div>
                 <motion.div 
-                  variants={fadeIn('up', 0.4 * (index + 1))}
+                  variants={fadeIn('up', 0.3)}
                   className="flex justify-center mb-2"
                 >
                   {[...Array(5)].map((_, starIndex) => (
@@ -128,7 +131,7 @@ const TestimonialsSection = () => {
                   {testimonial.name}
                 </motion.h3>
                 <motion.p 
-                  variants={fadeIn('up', 0.6 * (index + 1))}
+                  variants={fadeIn('up', 0.3 )}
                   className="text-gray-600"
                 >
                   {testimonial.text}
@@ -140,12 +143,12 @@ const TestimonialsSection = () => {
 
         {/* Custom Navigation Buttons */}
         <motion.div 
-          variants={fadeIn('up', 0.7)}
+          variants={fadeIn('up', 0.3)}
           className="flex justify-center gap-4 mt-8"
         >
           <motion.button 
             variants={fadeIn('right', 0.8)}
-            whileHover={{ scale: 1.1 }}
+            whileHover={{ scale: 0.7 }}
             whileTap={{ scale: 0.9 }}
             className="swiper-button-prev-custom w-12 h-12 rounded-full border border-gray-200 flex items-center justify-center hover:bg-red-500 hover:text-white cursor-pointer transition-colors"
           >
@@ -153,8 +156,8 @@ const TestimonialsSection = () => {
           </motion.button>
           <motion.button 
             variants={fadeIn('left', 0.8)}
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
+            whileHover={{ scale: 0.7 }}
+            whileTap={{ scale: 0.8 }}
             className="swiper-button-next-custom w-12 h-12 rounded-full border border-gray-200 flex items-center justify-center hover:bg-red-500 hover:text-white cursor-pointer transition-colors"
           >
             <BsChevronLeft className="w-6 h-6" />

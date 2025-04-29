@@ -10,8 +10,9 @@ const Navbar = () => {
 
   const navLinks = [
     { href: "#home", label: "الصفحة الرئيسية" },
-    { href: "#about", label: "من نحن" },
+    { href: "#about", label: "لماذا تختارنا" },
     { href: "#services", label: "خدماتنا" },
+    { href: "#pricing", label: "الأسعار التقريبية" },
     { href: "#testimonials", label: "اراء العملاء" },
   ]
 

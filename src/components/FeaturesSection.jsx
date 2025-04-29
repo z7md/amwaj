@@ -5,22 +5,22 @@ import { fadeIn, textVariant } from "../utils/motion";
 const FeaturesSection = () => {
   const features = [
     {
-      icon: "🔍", 
+      icon: "⭐", 
       title: "جودة عالية",
       description: "نقدم لك أفضل خدمات التنظيف باستخدام أدوات ومعدات حديثة."
     },
     {
-      icon: "⚙️",
+      icon: "👨‍🔧",
       title: "فريق محترف", 
       description: "لدينا فريق من الخبراء المدربين على أعلى مستوى لضمان تحقيق أفضل النتائج"
     },
     {
-      icon: "🚀",
+      icon: "💲",
       title: "أسعار تنافسية",
       description: "نقدم لك خدمات تنظيف عالية الجودة بأسعار معقولة"
     },
     {
-      icon: "🚀",
+      icon: " 😊",
       title: "رضاء العملاء",
       description: "نضع رضا عملائنا في مقدمة أولوياتنا ونسعى دائمًا لتحسين خدماتنا."
     }
@@ -32,6 +32,7 @@ const FeaturesSection = () => {
       initial="hidden"
       whileInView="show"
       className="max-w-7xl mx-auto px-4 py-16"
+      id="about"
     >
       <motion.div 
         variants={fadeIn('up', 0.3)}
@@ -54,16 +55,16 @@ const FeaturesSection = () => {
           <motion.div 
             key={index}
             variants={fadeIn('up', 0.3 * (index + 1))}
-            className="flex flex-col items-center p-6"
+            className="flex flex-col items-center p-6 "
           >
             <motion.div 
               variants={fadeIn('down', 0.4 * (index + 1))}
-              className="w-24 h-24 rounded-full mb-6 flex items-center justify-center" 
-              style={{ 
-                backgroundColor: index === 0 ? '#F1EFFD' : 
-                               index === 1 ? '#FFE7E7' : 
-                               '#FFF3E4'
-              }}
+              className="w-24 h-24 rounded-full mb-6 flex items-center justify-center border-3 border-red-500" 
+              // style={{ 
+              //   backgroundColor: index === 0 ? '#F1EFFD' : 
+              //                  index === 1 ? '#FFE7E7' : 
+              //                  '#FFF3E4'
+              // }}
             >
               <motion.div 
                 variants={fadeIn('up', 0.5 * (index + 1))}

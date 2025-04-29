@@ -1,7 +1,7 @@
 import React from 'react'
 import { motion } from "framer-motion";
 import { fadeIn, textVariant } from "../utils/motion";
-import heroImage from '../assets/heroImage.png'
+import heroImage from '../assets/hero-image.png'
 import { FaWhatsapp } from "react-icons/fa";
 import { IoCallOutline } from "react-icons/io5";
 
@@ -18,13 +18,13 @@ const Hero = () => {
           whileInView="show"
           className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight"
         >
-          بيتك يلمع... ومكتبك يتألق! {' '}
-          <span className="text-red-600 relative inline-block">
-            مع الأمواج، النظافة صارت أسهل وأسرع.
+   
+          <span className="text-red-600 relative inline-block p-2 ">
+          
 
-
+         مع الأمواج {"    "} 
           </span>
-
+            ،النظافة صارت أسهل وأسرع.
         </motion.h1>
 
         <motion.p
@@ -73,14 +73,13 @@ const Hero = () => {
         whileInView="show"
         className="w-full md:w-1/2 mt-16 md:mt-0 pl-0 md:pl-12"
       >
-        <div className="relative">
+        {/* <div className="relative">
           <img
             src={heroImage}
-            style={{ width: '1200px', height: "800px" }}
             alt="Team meeting"
             className="rounded-lg relative z-10 hover:scale-[1.02] transition-transform duration-300"
           />
-        </div>
+        </div> */}
       </motion.div>
     </section>
   )
