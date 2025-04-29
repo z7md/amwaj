@@ -49,14 +49,13 @@ const NewsletterSection = () => {
                 variants={fadeIn("up", 0.6)}
                 className="flex flex-col sm:flex-row gap-4 sm:gap-0"
               >
-                <motion.button
-                  variants={fadeIn("left", 0.7)}
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="w-full sm:w-auto cursor-pointer bg-white text-red-500 px-6 sm:px-14 py-3 sm:py-4 rounded-xl hover:opacity-40 transition-colors flex items-center justify-center sm:justify-start gap-2"
-                >
-                  <span> أتصل بنا الآن</span>
-                </motion.button>
+            <motion.a
+              variants={fadeIn("up", 0.4)}
+              href="tel:+966563309090"
+              className="w-full bg-white text-red-500 text-xl px-20 py-2.5 rounded-lg hover:scale-105 font-medium transition-all   text-center block"
+            >
+              اتصل بنا الآن
+            </motion.a>
               </motion.div>
             </motion.div>
           </div>

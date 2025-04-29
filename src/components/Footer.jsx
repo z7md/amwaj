@@ -65,7 +65,7 @@ const Footer = () => {
               </motion.a>
               <motion.a
                 whileHover={{ scale: 1.1 }}
-                href="#"
+                href="https://www.google.com/maps/place/%D8%A7%D9%84%D8%A7%D9%85%D9%88%D8%A7%D8%AC+%D8%A7%D9%84%D9%86%D8%B8%D9%8A%D9%81%D8%A9%E2%80%AD/@26.3277324,43.8908074,18z/data=!4m14!1m7!3m6!1s0x1581fd7e5e801fad:0x64474ec1a9b24315!2z2KfZhNin2YXZiNin2Kwg2KfZhNmG2LjZitmB2Kk!8m2!3d26.3276675!4d43.8895521!16s%2Fg%2F11kpvxw5sy!3m5!1s0x1581fd7e5e801fad:0x64474ec1a9b24315!8m2!3d26.3276675!4d43.8895521!16s%2Fg%2F11kpvxw5sy?entry=ttu&g_ep=EgoyMDI1MDQyMy4wIKXMDSoASAFQAw%3D%3D"
                 className="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center text-gray-600 hover:bg-red-600 hover:text-white transition-colors"
               >
                 <SiGooglemaps className="w-5 h-5" />
