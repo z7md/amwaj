@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { motion } from "framer-motion";
+import { fadeIn, textVariant } from "../utils/motion";
 
 // قائمة الخدمات المتاحة
 const allServices = [
@@ -40,37 +42,73 @@ export default function PricingSection() {
   }, 0);
 
   return (
-    <div className="p-6 max-w-2xl mx-auto flex justify-center items-center flex-col">
-      <h2 className="text-2xl font-bold mb-6">اختر الخدمات المطلوبة</h2>
+    <motion.div
+      initial="hidden"
+      whileInView="show"
+      variants={fadeIn('up', 0.2)}
+      className="p-6 max-w-2xl mx-auto flex justify-center items-center flex-col"
+    >
+      <motion.h2
+        variants={textVariant(0.3)}
+        className="text-2xl font-bold mb-6"
+      >
+        اختر الخدمات المطلوبة
+      </motion.h2>
 
       {/* عرض الخدمات للاختيار منها */}
-      <div className="mb-4">
-        <div className="w-full flex gap-2">
+      <motion.div className="mb-4">
+        <motion.div variants={fadeIn('up', 0.4)} className="w-full flex gap-2">
           {allServices.map(service => (
-            <div
+            <motion.div
               key={service.id}
               onClick={() => handleAddService(service.id)}
+              variants={fadeIn('up', 0.5)}
+              initial="hidden"
+              animate="show"
               className={`border rounded p-2 cursor-pointer ${
-                selectedServices.some(s => s.id === service.id) ? 'bg-blue-500 text-white' : 'bg-gray-100'
+                selectedServices.some(s => s.id === service.id)
+                  ? 'bg-blue-500 text-white'
+                  : 'bg-gray-100'
               }`}
             >
               {service.name}
-            </div>
+            </motion.div>
           ))}
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
 
       {/* عرض الخدمات التي اختارها المستخدم */}
       {selectedServices.length > 0 && (
-        <div className="mb-6">
+        <div
+          
+          className="mb-6"
+        >
           {selectedServices.map(service => (
-            <div key={service.id} className="flex items-center justify-between mb-4">
+            <div
+              key={service.id}
+              
+              className="flex items-center justify-between mb-4"
+            >
               <div>
-                <h3 className="font-semibold">{service.name}</h3>
-                <p className="text-sm text-gray-500">{service.price} ريال للخدمة</p>
+                <h3
+                  
+                  className="font-semibold"
+                >
+                  {service.name}
+                </h3>
+                <p
+                  
+                  className="text-sm text-gray-500"
+                >
+                  {service.price} ريال للخدمة
+                </p>
               </div>
-              <div className="flex items-center">
+              <div
+                
+                className="flex items-center"
+              >
                 <input
+                  
                   type="number"
                   min="0"
                   className="border rounded p-2 w-20"
@@ -84,9 +122,31 @@ export default function PricingSection() {
       )}
 
       {/* عرض المجموع الكلي */}
-      <div className="mt-6 text-xl font-bold">
+      <motion.div
+        className="mt-6 text-xl font-bold"
+        variants={fadeIn('up', 0.2)}
+      >
         المجموع الكلي: {total} ريال
-      </div>
-    </div>
+      </motion.div>
+
+      {/* زر الحجز */}
+      <motion.div
+        variants={fadeIn('up', 0.5)}
+        className="text-center mt-12"
+      >
+        <motion.p
+          variants={textVariant(0.6)}
+          className="text-xl text-gray-600 mb-4"
+        >
+          جاهز للحجز؟
+        </motion.p>
+        <motion.button
+          variants={fadeIn('up', 0.7)}
+          className="bg-red-600 text-white px-6 py-3 rounded-lg hover:bg-red-700 transition-colors cursor-pointer"
+        >
+          أحجز الآن
+        </motion.button>
+      </motion.div>
+    </motion.div>
   );
 }

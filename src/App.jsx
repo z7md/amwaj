@@ -1,18 +1,18 @@
-import './App.css'
-import Navbar from './components/Navbar'
-import Hero from './components/Hero'
-import CompanyLogo from './components/CompanyLogo'
-import PurposeSection from './components/PurposeSection'
-import FeaturesSection from './components/FeaturesSection'
-import ScheduleSection from './components/ScheduleSection'
-import MonitorSection from './components/MonitorSection'
-import PricingSection from './components/PricingSection'
-import ServicesSection from './components/ServicesSection'
-import TestimonialsSection from './components/TestimonialsSection'
-import NewsletterSection from './components/NewsletterSection'
-import Footer from './components/Footer'
-import P from './components/P'
-import "./index.css"
+import "./App.css";
+import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
+import CompanyLogo from "./components/CompanyLogo";
+import PurposeSection from "./components/PurposeSection";
+import FeaturesSection from "./components/FeaturesSection";
+import ScheduleSection from "./components/ScheduleSection";
+import MonitorSection from "./components/MonitorSection";
+import PricingSection from "./components/PricingSection";
+import ServicesSection from "./components/ServicesSection";
+import TestimonialsSection from "./components/TestimonialsSection";
+import NewsletterSection from "./components/NewsletterSection";
+import Footer from "./components/Footer";
+import P from "./components/P";
+import "./index.css";
 
 function App() {
   return (
@@ -23,16 +23,20 @@ function App() {
         <Hero />
 
         <FeaturesSection />
-        <hr className="opacity-50"/>
+        <hr className="w-[80%] m-auto text-gray-500 bg-gray-500 opacity-40" />
         <ServicesSection />
-        <PricingSection />
-        <P/>
+        <hr className="w-[80%] m-auto text-gray-500 bg-gray-500 opacity-40" />
+
+        <P />
+        <hr className="w-[80%] m-auto text-gray-500 bg-gray-500 opacity-40" />
         <TestimonialsSection />
+        <hr className="w-[80%] m-auto text-gray-500 bg-gray-500 opacity-40" />
         <NewsletterSection />
+
         <Footer />
       </div>
     </main>
-  )
+  );
 }
 
-export default App
+export default App;
