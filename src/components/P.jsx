@@ -156,7 +156,7 @@ export default function PricingSection() {
           أتصل الآن
         </motion.a>
       </motion.div>
-    </motion.div>
+    </motion.div> 
     </section>
   );
 }

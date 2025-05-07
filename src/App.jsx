@@ -27,7 +27,7 @@ function App() {
         <ServicesSection />
         <hr className="w-[80%] m-auto text-gray-500 bg-gray-500 opacity-40" />
 
-        <P />
+        <PricingSection />
         <hr className="w-[80%] m-auto text-gray-500 bg-gray-500 opacity-40" />
         <TestimonialsSection />
         <hr className="w-[80%] m-auto text-gray-500 bg-gray-500 opacity-40" />

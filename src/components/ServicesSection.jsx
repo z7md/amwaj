@@ -18,21 +18,21 @@ const ServicesSection = () => {
       icon: <FaTruck className="w-8 h-8 text-red-500" />, // Red for pest control
       title: "نقل العفش",
       description:
-        "نحن نقدم حلول فعالة لمكافحة الحشرات لضمان بيئة نظيفة وآمنة لك ولعائلتك.",
+        " نقدم حلول فعالة لمكافحة الحشرات لضمان بيئة نظيفة وآمنة لك ولعائلتك.",
       link: "#learn-more",
     },
     {
       icon: <FaHouseDamage className="w-8 h-8 text-blue-400" />, // Light blue for house cleaning
       title: "غسيل المنازل",
       description:
-        "نحن نقدم خدمة غسيل المنازل بكفاءة عالية، لجعل منزلك نظيفاً ومشرقاً.",
+        " نقدم خدمة غسيل المنازل بكفاءة عالية، لجعل منزلك نظيفاً ومشرقاً.",
       link: "#learn-more",
     },
     {
       icon: <MdOutlineCleaningServices className="w-8 h-8 text-yellow-400" />, // Light yellow for tile cleaning
       title: "جلي وتلميع البلاط والرخام",
       description:
-        "نحن متخصصون في جلي وتلميع البلاط والرخام لضمان لمسة نهائية لامعة وجميلة.",
+        " متخصصون في جلي وتلميع البلاط والرخام لضمان لمسة نهائية لامعة وجميلة.",
       link: "#learn-more",
     },
     {
@@ -46,14 +46,14 @@ const ServicesSection = () => {
       icon: <IoMdBrush className="w-8 h-8 text-green-400" />, // Green for carpet and sofa cleaning
       title: "غسيل المجالس والسجاد",
       description:
-        "نحن نوفر خدمة غسيل المجالس والسجاد لإعادة النظافة والانتعاش لكل زاوية في منزلك.",
+        " نوفر خدمة غسيل المجالس والسجاد لإعادة النظافة والانتعاش لكل زاوية في منزلك.",
       link: "#learn-more",
     },
     {
       icon: <IoBugSharp className="w-8 h-8 text-red-500" />, // Red for pest control
       title: "مكافحة الحشرات",
       description:
-        "نحن نقدم حلول فعالة لمكافحة الحشرات لضمان بيئة نظيفة وآمنة لك ولعائلتك.",
+        " نقدم حلول فعالة لمكافحة الحشرات لضمان بيئة نظيفة وآمنة لك ولعائلتك.",
       link: "#learn-more",
     },
   ];
@@ -89,14 +89,14 @@ const ServicesSection = () => {
           {services.map((service, index) => (
             <motion.div
               key={index}
-              variants={fadeIn("up", 0.3 * (index + 1))}
+              variants={fadeIn("up", 0.3)}
               whileHover={{ scale: 1.05 }}
               initial="hidden"
               whileInView="show"
-              className="bg-white max-w-72 cursor-pointer rounded-2xl p-6 hover:shadow-xl transition-shadow duration-300"
+              className="bg-white max-w-72 cursor-pointer rounded-2xl p-6 shadow-xl transition-shadow duration-300"
             >
               <motion.div
-                variants={fadeIn("down", 0.4 * (index + 1))}
+                variants={fadeIn("down", 0.6 )}
                 initial="hidden"
                 whileInView="show"
                 className="mb-4"
@@ -114,7 +114,7 @@ const ServicesSection = () => {
               <motion.p
                 initial="hidden"
                 whileInView="show"
-                variants={fadeIn("up", 0.5 * (index + 1))}
+                variants={fadeIn("up", 0.7)}
                 className="text-gray-600 mb-4"
               >
                 {service.description}
