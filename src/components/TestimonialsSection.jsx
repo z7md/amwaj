@@ -36,7 +36,6 @@ const testimonials = [
   {
     id: 5,
     name: "Ahmad Mohmad",
-    image: "https://randomuser.me/api/portraits/men/32.jpg",
     text: `بيض الله وجهكم
 الصراحة شغلكم يوسع الصدر ماقصرتو
 زينت العمال مهب مزاجيين يتقبلون التوجيه والتدبير
@@ -45,7 +44,6 @@ const testimonials = [
   {
     id: 6,
     name: "Afrah Ebrahim",
-    image: "https://randomuser.me/api/portraits/women/28.jpg",
     text: `بدون مبالغة أفضل شركة تنظيف بالقصيم رقي بالعمل والتعامل ، جربتهم بتنظيف فيلا وشالية تنظيفهم لايعلى عليه مناشفهم أستخدام واحد وأسعارهم مناسبه جدا`
   },
 
@@ -107,6 +105,7 @@ const TestimonialsSection = () => {
                   initial="hidden"
                   whileInView="show"
                   className="w-20 h-20 mx-auto mb-4"
+                  aria-label='user'
                 >
                   <FaRegUserCircle className="w-full h-full text-red-700"/>
                 </motion.div>
@@ -150,6 +149,7 @@ const TestimonialsSection = () => {
             variants={fadeIn('right', 0.8)}
             whileHover={{ scale: 0.7 }}
             whileTap={{ scale: 0.9 }}
+            aria-label='Right arrow'
             className="swiper-button-prev-custom w-12 h-12 rounded-full border border-gray-200 flex items-center justify-center hover:bg-red-500 hover:text-white cursor-pointer transition-colors"
           >
             <BsChevronRight className="w-6 h-6" />
@@ -158,6 +158,7 @@ const TestimonialsSection = () => {
             variants={fadeIn('left', 0.8)}
             whileHover={{ scale: 0.7 }}
             whileTap={{ scale: 0.8 }}
+            aria-label='Left arrow'
             className="swiper-button-next-custom w-12 h-12 rounded-full border border-gray-200 flex items-center justify-center hover:bg-red-500 hover:text-white cursor-pointer transition-colors"
           >
             <BsChevronLeft className="w-6 h-6" />

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { HiMenu, HiX } from "react-icons/hi";
 import { motion } from "framer-motion";
 import { fadeIn } from "../utils/motion";
-import Image from "../assets/logo.png";
+import Image from "../assets/logo.webp";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -32,7 +32,7 @@ const Navbar = () => {
         >
           <img
             src={Image}
-            alt="Example"
+            alt="Logo"
             style={{ width: "70px", height: "50px", objectFit: "cover" }}
           />
         </motion.div>

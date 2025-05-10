@@ -69,6 +69,7 @@ const FeaturesSection = () => {
               <motion.div 
                 variants={fadeIn('up', 0.5 * (index + 1))}
                 className="text-3xl"
+                aria-label={feature.icon}
               >
                 {feature.icon}
               </motion.div>
