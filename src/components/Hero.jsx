@@ -14,7 +14,7 @@ const Hero = () => {
       {/* Left Column */}
       <div className="w-full md:w-1/2 space-y-8">
         <motion.h1
-          variants={textVariant(0.3)}
+          variants={textVariant(0.05)}
           initial="hidden"
           whileInView="show"
           className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight"
@@ -26,7 +26,7 @@ const Hero = () => {
         </motion.h1>
 
         <motion.p
-          variants={fadeIn("up", 0.4)}
+          variants={fadeIn("up", 0.05)}
           initial="hidden"
           whileInView="show"
           className="text-gray-600 text-lg md:text-xl max-w-xl"
@@ -36,7 +36,7 @@ const Hero = () => {
           البال! 🧹🏡
         </motion.p>
         <motion.div
-          variants={fadeIn("up", 0.7)}
+          variants={fadeIn("up", 0.1)}
           className="flex gap-4"
           initial="hidden"
           whileInView="show"
@@ -102,7 +102,7 @@ const Hero = () => {
 
       {/* Right Column - Images */}
       <motion.div
-        variants={fadeIn("left", 0.5)}
+        variants={fadeIn("left", 0.05)}
         initial="hidden"
         whileInView="show"
         className="w-full md:w-1/2 mt-16 md:mt-0 pl-0 md:pl-12"

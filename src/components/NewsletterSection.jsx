@@ -6,7 +6,7 @@ const NewsletterSection = () => {
   return (
     <section id="newsletter" className="section-container px-4 md:px-0">
       <motion.div
-        variants={fadeIn("up", 0.2)}
+        variants={fadeIn("up", 0.05)}
         initial="hidden"
         whileInView="show"
         className="bg-red-600 rounded-2xl overflow-hidden opacity-85"
@@ -14,24 +14,24 @@ const NewsletterSection = () => {
         <div className="relative md:px-16 px-6 py-16 md:py-24">
           {/* Background Gradient */}
           <motion.div
-            variants={fadeIn("left", 0.4)}
+            variants={fadeIn("left", 0.1)}
             className="absolute top-0 right-0 w-1/2 h-full bg-red-700 clip-path-slant hidden md:block opacity-85"
           ></motion.div>
 
           <div className="relative flex flex-col lg:flex-row items-center justify-between gap-8 md:gap-12">
             {/* Left Content */}
             <motion.div
-              variants={fadeIn("right", 0.5)}
+              variants={fadeIn("right", 0.11)}
               className="text-white max-w-lg text-center md:text-left"
             >
               <motion.h2
-                variants={textVariant(0.3)}
+                variants={textVariant(0.12)}
                 className="text-2xl sm:text-3xl md:text-4xl font-medium mb-4 text-center"
               >
                 أحجز موعدك الأن
               </motion.h2>
               <motion.p
-                variants={fadeIn("up", 0.6)}
+                variants={fadeIn("up", 0.13)}
                 className="text-white text-sm sm:text-base text-center "
               >
                 أفضل فريق تنظيف وأفضل خدمات توصيل جميعها في خدمتكم. بيئة نظيفة

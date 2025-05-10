@@ -26,36 +26,36 @@ const ScheduleSection = () => {
 
         {/* Right side - Content */}
         <motion.div 
-          variants={fadeIn('left', 0.3)}
+          variants={fadeIn('left', 0.1)}
           className="w-full md:w-1/2"
         >
           <motion.span 
-            variants={fadeIn('up', 0.4)}
+            variants={fadeIn('up', 0.2)}
             className="text-orange-500 font-semibold"
           >
             SCHEDULE
           </motion.span>
           <motion.h2 
-            variants={textVariant(0.5)}
+            variants={textVariant(0.2)}
             className="text-3xl md:text-4xl font-bold text-navy-900 mt-4 mb-6"
           >
             Streamline Your Business <br />
             With Smart Scheduling Solutions
           </motion.h2>
           <motion.p 
-            variants={fadeIn('up', 0.6)}
+            variants={fadeIn('up', 0.16)}
             className="text-gray-600 mb-8"
           >
             Take control of your time and boost productivity with our intelligent scheduling system. Automate appointments, manage team availability, and deliver exceptional customer experiences through seamless calendar management.
           </motion.p>
           <motion.a 
-            variants={fadeIn('up', 0.7)}
+            variants={fadeIn('up', 0.23)}
             href="#" 
             className="text-blue-500 font-semibold flex items-center gap-2 hover:gap-4 transition-all"
           >
             Explore scheduling features
             <motion.svg 
-              variants={fadeIn('left', 0.8)}
+              variants={fadeIn('left', 0.2)}
               className="w-5 h-5" 
               fill="none" 
               stroke="currentColor" 

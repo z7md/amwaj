@@ -38,13 +38,13 @@ const Footer = () => {
               {/* <span className="text-xl font-medium ml-1">الأمواج النظيفة</span> */}
             </motion.div>
             <motion.p
-              variants={fadeIn("up", 0.6)}
+              variants={fadeIn("up", 0.13)}
               className="text-gray-600 mb-6"
             >
               أفضل فريق تنظيف وأفضل خدمات توصيل جميعها في خدمتكم. بيئة نظيفة
               وصحية بين يديك.
             </motion.p>
-            <motion.div variants={fadeIn("up", 0.7)} className="flex gap-4">
+            <motion.div variants={fadeIn("up", 0.26)} className="flex gap-4">
               <motion.a
                 whileHover={{ scale: 1.1 }}
                 href="tel:+966563309090"
@@ -75,28 +75,28 @@ const Footer = () => {
 
           {/* Links Columns */}
           <motion.div
-            variants={fadeIn("left", 0.4)}
+            variants={fadeIn("left", 0.2)}
             className="lg:col-span-8"
           ></motion.div>
         </motion.div>
 
         {/* Copyright */}
         <motion.div
-          variants={fadeIn("up", 0.8)}
+          variants={fadeIn("up", 0.22)}
           className="border-t border-gray-200 mt-12 pt-8"
         >
           <motion.div
-            variants={fadeIn("up", 0.9)}
+            variants={fadeIn("up", 0.33)}
             className="flex flex-col md:flex-row justify-between items-center gap-4"
           >
             <motion.p
-              variants={fadeIn("right", 1.0)}
+              variants={fadeIn("right", 0.44)}
               className="text-gray-600 text-sm"
             >
               جميع الحقوق محفوظة © {new Date().getFullYear()} الأمواج النظيفة
             </motion.p>
             <motion.p
-              variants={fadeIn("left", 1.0)}
+              variants={fadeIn("left", 0.44)}
               className="text-gray-600 text-sm"
             >
               Created by{" "}

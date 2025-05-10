@@ -48,17 +48,17 @@ const FeaturesSection = () => {
       </motion.div>
       
       <motion.div 
-        variants={fadeIn('up', 0.5)}
+        variants={fadeIn('up', 0.1)}
         className="grid grid-cols-1 md:grid-cols-4 gap-8"
       >
         {features.map((feature, index) => (
           <motion.div 
             key={index}
-            variants={fadeIn('up', 0.3 * (index + 1))}
+            variants={fadeIn('up', 0.2 )}
             className="flex flex-col items-center p-6 "
           >
             <motion.div 
-              variants={fadeIn('down', 0.4 * (index + 1))}
+              variants={fadeIn('down', 0.23)}
               className="w-24 h-24 rounded-full mb-6 flex items-center justify-center border-3 border-red-500" 
               // style={{ 
               //   backgroundColor: index === 0 ? '#F1EFFD' : 
@@ -67,7 +67,7 @@ const FeaturesSection = () => {
               // }}
             >
               <motion.div 
-                variants={fadeIn('up', 0.5 * (index + 1))}
+                variants={fadeIn('up', 0.22 )}
                 className="text-3xl"
                 aria-label={feature.icon}
               >
@@ -75,13 +75,13 @@ const FeaturesSection = () => {
               </motion.div>
             </motion.div>
             <motion.h3 
-              variants={textVariant(0.3)}
+              variants={textVariant(0.12)}
               className="text-2xl font-medium mb-3"
             >
               {feature.title}
             </motion.h3>
             <motion.p 
-              variants={fadeIn('up', 0.6 * (index + 1))}
+              variants={fadeIn('up', 0.22 )}
               className="text-gray-500 text-center"
             >
               {feature.description}

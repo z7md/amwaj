@@ -53,13 +53,13 @@ const TestimonialsSection = () => {
   return (
     <section id="testimonials" className="py-16 px-4 max-w-7xl mx-auto">
       <motion.div 
-        variants={fadeIn('up', 0.3)}
+        variants={fadeIn('up', 0.01)}
         initial="hidden"
         whileInView="show"
         className="text-center mb-12"
       >
         <motion.h2 
-          variants={textVariant(0.2)}
+          variants={textVariant(0.1)}
           className="text-3xl md:text-4xl font-bold mb-4"
         >
           اراء العملاء
@@ -67,7 +67,7 @@ const TestimonialsSection = () => {
       </motion.div>
 
       <motion.div 
-        variants={fadeIn('up', 0.5)}
+        variants={fadeIn('up', 0.1)}
         initial="hidden"
         whileInView="show"
         className="relative"
@@ -95,13 +95,13 @@ const TestimonialsSection = () => {
           {testimonials.map((testimonial, index) => (
             <SwiperSlide key={testimonial.id} className='h-full md:py-12 py-4'>
               <motion.div 
-                variants={fadeIn('up', 0.3)}
+                variants={fadeIn('up', 0.15)}
                 initial="hidden"
                 whileInView="show"
                 className="text-center bg-white p-4 rounded-lg shadow-md h-full flex flex-col"
               >
                 <motion.div 
-                  variants={fadeIn('down', 0.3)}
+                  variants={fadeIn('down', 0.15)}
                   initial="hidden"
                   whileInView="show"
                   className="w-20 h-20 mx-auto mb-4"
@@ -110,7 +110,7 @@ const TestimonialsSection = () => {
                   <FaRegUserCircle className="w-full h-full text-red-700"/>
                 </motion.div>
                 <motion.div 
-                  variants={fadeIn('up', 0.3)}
+                  variants={fadeIn('up', 0.15)}
                   className="flex justify-center mb-2"
                 >
                   {[...Array(5)].map((_, starIndex) => (
@@ -146,7 +146,7 @@ const TestimonialsSection = () => {
           className="flex justify-center gap-4 mt-8"
         >
           <motion.button 
-            variants={fadeIn('right', 0.8)}
+            variants={fadeIn('right', 0.23)}
             whileHover={{ scale: 0.7 }}
             whileTap={{ scale: 0.9 }}
             aria-label='Right arrow'
@@ -155,7 +155,7 @@ const TestimonialsSection = () => {
             <BsChevronRight className="w-6 h-6" />
           </motion.button>
           <motion.button 
-            variants={fadeIn('left', 0.8)}
+            variants={fadeIn('left', 0.23)}
             whileHover={{ scale: 0.7 }}
             whileTap={{ scale: 0.8 }}
             aria-label='Left arrow'

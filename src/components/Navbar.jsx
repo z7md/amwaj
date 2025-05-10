@@ -41,6 +41,7 @@ const Navbar = () => {
           variants={fadeIn("left", 0.3)}
           className="md:hidden p-2 cursor-pointer"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
+          aria-label="Menu"
         >
           {isMenuOpen ? (
             <HiX className="h-6 w-6" />
