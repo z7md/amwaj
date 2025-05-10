@@ -1,4 +1,3 @@
-import React from "react";
 import { FaWhatsapp } from "react-icons/fa";
 import { SiGooglemaps } from "react-icons/si";
 import { motion } from "framer-motion";

@@ -1,56 +1,49 @@
-
 import { motion } from "framer-motion";
 import { fadeIn, textVariant } from "../utils/motion";
-import { FaHouseDamage } from "react-icons/fa"; // House cleaning
-import { MdOutlineCleaningServices } from "react-icons/md"; // Tile and marble cleaning
-import { FaTools } from "react-icons/fa"; // Furniture assembly
-import { IoMdBrush } from "react-icons/io"; // Carpet and sofa cleaning
+import { FaHouseDamage } from "react-icons/fa";
+import { MdOutlineCleaningServices } from "react-icons/md";
+import { FaTools } from "react-icons/fa";
+import { IoMdBrush } from "react-icons/io";
 import { IoBugSharp } from "react-icons/io5";
 import { FaTruck } from "react-icons/fa";
 
 const ServicesSection = () => {
   const services = [
     {
-      icon: <FaTruck className="w-8 h-8 text-red-500" />, // Red for pest control
+      icon: <FaTruck className="w-8 h-8 text-red-500" />,
       title: "نقل العفش",
       description:
         " نقدم حلول فعالة لمكافحة الحشرات لضمان بيئة نظيفة وآمنة لك ولعائلتك.",
-      link: "#learn-more",
     },
     {
-      icon: <FaHouseDamage className="w-8 h-8 text-blue-400" />, // Light blue for house cleaning
+      icon: <FaHouseDamage className="w-8 h-8 text-blue-400" />,
       title: "غسيل المنازل",
       description:
         " نقدم خدمة غسيل المنازل بكفاءة عالية، لجعل منزلك نظيفاً ومشرقاً.",
-      link: "#learn-more",
     },
     {
-      icon: <MdOutlineCleaningServices className="w-8 h-8 text-yellow-400" />, // Light yellow for tile cleaning
+      icon: <MdOutlineCleaningServices className="w-8 h-8 text-yellow-400" />,
       title: "جلي وتلميع البلاط والرخام",
       description:
         " متخصصون في جلي وتلميع البلاط والرخام لضمان لمسة نهائية لامعة وجميلة.",
-      link: "#learn-more",
     },
     {
-      icon: <FaTools className="w-8 h-8 text-orange-500" />, // Orange for furniture assembly
+      icon: <FaTools className="w-8 h-8 text-orange-500" />,
       title: "فك وتركيب الأثاث",
       description:
         "نقدم خدمة فك وتركيب الأثاث بدقة واحترافية، لنضمن لك ترتيب منزلك بسهولة.",
-      link: "#learn-more",
     },
     {
-      icon: <IoMdBrush className="w-8 h-8 text-green-400" />, // Green for carpet and sofa cleaning
+      icon: <IoMdBrush className="w-8 h-8 text-green-400" />,
       title: "غسيل المجالس والسجاد",
       description:
         " نوفر خدمة غسيل المجالس والسجاد لإعادة النظافة والانتعاش لكل زاوية في منزلك.",
-      link: "#learn-more",
     },
     {
-      icon: <IoBugSharp className="w-8 h-8 text-red-500" />, // Red for pest control
+      icon: <IoBugSharp className="w-8 h-8 text-red-500" />,
       title: "مكافحة الحشرات",
       description:
         " نقدم حلول فعالة لمكافحة الحشرات لضمان بيئة نظيفة وآمنة لك ولعائلتك.",
-      link: "#learn-more",
     },
   ];
 
@@ -63,9 +56,8 @@ const ServicesSection = () => {
         initial="hidden"
         whileInView="show"
         variants={fadeIn("up", 0.1)}
-        className="flex flex-col  items-center justify-between gap-12 lg:gap-12"
+        className="flex flex-col items-center justify-between gap-12 lg:gap-12"
       >
-        {/* Header */}
         <motion.div variants={fadeIn("right", 0.2)} className="md:w-1/3">
           <motion.h2
             variants={textVariant(0.1)}
@@ -75,7 +67,6 @@ const ServicesSection = () => {
           </motion.h2>
         </motion.div>
 
-        {/* Services Grid */}
         <motion.div
           initial="hidden"
           whileInView="show"
@@ -87,30 +78,21 @@ const ServicesSection = () => {
               key={index}
               variants={fadeIn("up", 0.15)}
               whileHover={{ scale: 1.05 }}
-              initial="hidden"
-              whileInView="show"
               className="bg-white max-w-72 cursor-pointer rounded-2xl p-6 shadow-xl transition-shadow duration-300"
             >
               <motion.div
-                variants={fadeIn("down", 0.25 )}
-                initial="hidden"
-                whileInView="show"
+                variants={fadeIn("down", 0.25)}
                 className="mb-4"
-                aria-expanded={service.title}
               >
                 {service.icon}
               </motion.div>
               <motion.h3
                 variants={textVariant(0.12)}
-                initial="hidden"
-                whileInView="show"
                 className="text-xl font-semibold mb-2"
               >
                 {service.title}
               </motion.h3>
               <motion.p
-                initial="hidden"
-                whileInView="show"
                 variants={fadeIn("up", 0.23)}
                 className="text-gray-600 mb-4"
               >

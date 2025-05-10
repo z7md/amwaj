@@ -16,7 +16,7 @@ const testimonials = [
   {
     id: 2,
     name: "Om Lamees",
-    text: "  دلله ربي وفقني وتعاملت معهم وكان اختيار موفق اشتغلوا على البيت بعد ترميم العماره بداية من الخزان العلوي للخزان السفلي مع الأرصفة للبيت وكانوا دقيقين وسريعين وشغل احترافي وممتاز وسعر ممتاز وتعامل الأستاذ أبو إلياس ومتابعته ب استمرار للموقع والعمالهشكرا لكم ومن افضل شركات التنظيف والنقل بالمنطقة 🙏🏻👌🏻  ",
+    text: "دلله ربي وفقني وتعاملت معهم وكان اختيار موفق اشتغلوا على البيت بعد ترميم العماره بداية من الخزان العلوي للخزان السفلي مع الأرصفة للبيت وكانوا دقيقين وسريعين وشغل احترافي وممتاز وسعر ممتاز وتعامل الأستاذ أبو إلياس ومتابعته ب استمرار للموقع والعماله شكرا لكم ومن افضل شركات التنظيف والنقل بالمنطقة 🙏🏻👌🏻",
   },
   {
     id: 3,
@@ -44,9 +44,8 @@ const testimonials = [
   {
     id: 6,
     name: "Afrah Ebrahim",
-    text: `بدون مبالغة أفضل شركة تنظيف بالقصيم رقي بالعمل والتعامل ، جربتهم بتنظيف فيلا وشالية تنظيفهم لايعلى عليه مناشفهم أستخدام واحد وأسعارهم مناسبه جدا`
+    text: `بدون مبالغة أفضل شركة تنظيف بالقصيم رقي بالعمل والتعامل ، جربتهم بتنظيف فيلا وشالية تنظيفهم لايعلى عليه مناشفهم أستخدام واحد وأسعارهم مناسبه جدا`,
   },
-
 ];
 
 const TestimonialsSection = () => {
@@ -80,19 +79,13 @@ const TestimonialsSection = () => {
             prevEl: '.swiper-button-prev-custom',
           }}
           breakpoints={{
-            0: {
-              slidesPerView: 1,
-            },
-            768: {
-              slidesPerView: 2,
-            },
-            1024: {
-              slidesPerView: 3,
-            },
+            0: { slidesPerView: 1 },
+            768: { slidesPerView: 2 },
+            1024: { slidesPerView: 3 },
           }}
           className="testimonials-swiper md:mb-12"
         >
-          {testimonials.map((testimonial, index) => (
+          {testimonials.map((testimonial) => (
             <SwiperSlide key={testimonial.id} className='h-full md:py-12 py-4'>
               <motion.div 
                 variants={fadeIn('up', 0.15)}
@@ -105,7 +98,8 @@ const TestimonialsSection = () => {
                   initial="hidden"
                   whileInView="show"
                   className="w-20 h-20 mx-auto mb-4"
-                  aria-label='user'
+                  role="img"
+                  aria-label={`صورة المستخدم ${testimonial.name}`}
                 >
                   <FaRegUserCircle className="w-full h-full text-red-700"/>
                 </motion.div>
@@ -149,7 +143,7 @@ const TestimonialsSection = () => {
             variants={fadeIn('right', 0.23)}
             whileHover={{ scale: 0.7 }}
             whileTap={{ scale: 0.9 }}
-            aria-label='Right arrow'
+            aria-label='السابق'
             className="swiper-button-prev-custom w-12 h-12 rounded-full border border-gray-200 flex items-center justify-center hover:bg-red-500 hover:text-white cursor-pointer transition-colors"
           >
             <BsChevronRight className="w-6 h-6" />
@@ -158,13 +152,12 @@ const TestimonialsSection = () => {
             variants={fadeIn('left', 0.23)}
             whileHover={{ scale: 0.7 }}
             whileTap={{ scale: 0.8 }}
-            aria-label='Left arrow'
+            aria-label='التالي'
             className="swiper-button-next-custom w-12 h-12 rounded-full border border-gray-200 flex items-center justify-center hover:bg-red-500 hover:text-white cursor-pointer transition-colors"
           >
             <BsChevronLeft className="w-6 h-6" />
           </motion.button>
         </motion.div>
-
       </motion.div>
     </section>
   );
