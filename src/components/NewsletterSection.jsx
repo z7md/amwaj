@@ -50,7 +50,7 @@ const NewsletterSection = () => {
               >
             <motion.a
               variants={fadeIn("up", 0.4)}
-              href="tel:+966563309090"
+              href="tel:+966563590908"
               className="w-full bg-white text-red-500 text-xl px-20 py-2.5 rounded-lg hover:scale-105 font-medium transition-all   text-center block"
             >
               اتصل بنا الآن

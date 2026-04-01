@@ -46,7 +46,7 @@ const Footer = () => {
             <motion.div variants={fadeIn("up", 0.26)} className="flex gap-4">
               <motion.a
                 whileHover={{ scale: 1.1 }}
-                href="tel:+966563309090"
+                href="tel:+966563590908"
                 aria-label="call"
                 className="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center text-gray-600 hover:bg-red-600 hover:text-white transition-colors"
               >
@@ -55,7 +55,7 @@ const Footer = () => {
 
               <motion.a
                 whileHover={{ scale: 1.1 }}
-                href="https://wa.me/966563309090"
+                href="https://wa.me/966563590908"
                 aria-label="Whatsapp"
                 className="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center text-gray-600 hover:bg-red-700 hover:text-white transition-colors"
               >

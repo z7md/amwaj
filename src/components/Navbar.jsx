@@ -80,7 +80,7 @@ const Navbar = () => {
           whileTap={{ scale: 0.95 }}
           className="hidden md:block bg-red-600 text-white px-6 py-2.5 rounded-lg hover:bg-red-700 text-sm font-medium transition-all hover:shadow-lg hover:shadow-red-100 cursor-pointer"
         >
-          <a href="tel:+966563309090">اتصل بنا الآن</a>
+          <a href="tel:+966563590908">اتصل بنا الآن</a>
         </motion.button>
       </div>
 
@@ -119,7 +119,7 @@ const Navbar = () => {
               variants={fadeIn("up", 0.4)}
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
-              href="tel:+966563309090"
+              href="tel:+966563590908"
               className="w-full bg-red-600 text-white px-6 py-2.5 rounded-lg hover:bg-red-700 text-sm font-medium transition-all hover:shadow-lg hover:shadow-red-100 text-center block"
             >
               اتصل بنا الآن

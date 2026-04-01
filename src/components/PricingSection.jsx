@@ -156,7 +156,7 @@ export default function PricingSection() {
         <motion.a
           variants={fadeIn('up', 0.7)}
           className="bg-red-600 text-white px-6 py-3 rounded-lg hover:bg-red-700 transition-colors cursor-pointer"
-          href="tel:+966563309090"
+          href="tel:+966563590908"
         >
           أتصل الآن
         </motion.a>

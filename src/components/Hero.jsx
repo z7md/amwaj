@@ -38,7 +38,7 @@ const Hero = () => {
         >
           <motion.a
             whileHover={{ scale: 1.1 }}
-            href="tel:+966563309090"
+            href="tel:+966563590908"
             aria-label="call"
             className="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center text-gray-600 hover:bg-red-600 hover:text-white transition-colors"
           >
@@ -48,7 +48,7 @@ const Hero = () => {
           <motion.a
             whileHover={{ scale: 1.1 }}
             aria-label="whatsapp"
-            href="https://wa.me/966563309090"
+            href="https://wa.me/966563590908"
             className="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center text-gray-600 hover:bg-red-700 hover:text-white transition-colors"
           >
             <FaWhatsapp className="w-7 h-7" />
